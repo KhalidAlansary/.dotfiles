@@ -1,3 +1,4 @@
+print("Hi salooma")
 require("config")
 
 -- :wq automatically creates needed directories

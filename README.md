@@ -1,18 +1,11 @@
-# My Neovim Config
+![Retro Phone GIF](https://web.archive.org/web/20090820040100im_/http://www.geocities.com/montana_schnauzers/phone-anim.gif)
 
-Welcome to my personal Neovim configuration repository! 🎉 This setup is optimized for a buttery smooth and blazingly fast editing experience.
+### 🚀 You have reached my dotfiles repo. Leave a star if you like it. :star: (or don't who cares)
 
-## Prerequisites
+![Screenshot](https://github.com/user-attachments/assets/f6f19641-44ab-4cbb-a08b-5706b03ab8f4)
 
-Before using this configuration, make sure you have the following installed:
+#### 🍜 These configurations are hand curated (stolen) by me from various sources over the years for a buttery smooth and a super productive workflow.
 
-- **ripgrep**
-- **git**
-- **node**
-- **npm**
+#### 🦹 Ranging from an awesome looking terminal to my very own (almost) perfect neovim setup.
 
-#### For my Arch Linux comrades:
-
-```bash
-sudo pacman -S ripgrep git nodejs npm
-```
+#### 🧑🏻‍💻 Feel free to copy (steal) anything you like and make it your own. I don't recommend you to use everything as it is tho.

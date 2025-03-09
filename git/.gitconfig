@@ -1,0 +1,12 @@
+[gpg]
+	format = ssh
+[user]
+	signingkey = /home/khald0r/.ssh/id_ed25519.pub
+	email = khaled.ansary2003@outlook.com
+	name = Khalid Alansary
+[alias]
+	l = log --oneline
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = master
