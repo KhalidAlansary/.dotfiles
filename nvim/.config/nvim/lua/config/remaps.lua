@@ -3,9 +3,6 @@ vim.g.mapleader = " "
 vim.keymap.set({ "o", "x" }, "aq", 'a"')
 vim.keymap.set({ "o", "x" }, "iq", 'i"')
 
-vim.keymap.set({ "o", "x" }, "at", "a<")
-vim.keymap.set({ "o", "x" }, "it", "i<")
-
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
