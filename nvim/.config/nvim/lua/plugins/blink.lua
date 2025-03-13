@@ -23,10 +23,6 @@ return {
 	---@module 'blink.cmp'
 	---@type blink.cmp.Config
 	opts = {
-		appearance = {
-			use_nvim_cmp_as_default = true,
-			nerd_font_variant = "mono",
-		},
 		completion = {
 			documentation = {
 				auto_show = true,
@@ -40,6 +36,9 @@ return {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",
 					score_offset = 100,
+				},
+				snippets = {
+					score_offset = 50,
 				},
 			},
 		},
