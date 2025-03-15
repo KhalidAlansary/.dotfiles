@@ -27,6 +27,7 @@ return {
 				"emmet_ls",
 				"pyright",
 				"clangd",
+				"cmake",
 			},
 			automatic_installation = true,
 		})
@@ -40,6 +41,7 @@ return {
 				"pylint",
 				"eslint_d",
 				"clang-format",
+				"gersemi",
 			},
 			automatic_installation = true,
 		})
