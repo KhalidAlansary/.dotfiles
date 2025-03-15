@@ -4,6 +4,10 @@ SAVEHIST=1000
 bindkey -e
 
 zstyle :compinstall filename '/home/khald0r/.zshrc'
+zstyle ':completion:*' menu select
+
+export LS_COLORS="$(vivid generate molokai)"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 autoload -Uz compinit
 compinit
