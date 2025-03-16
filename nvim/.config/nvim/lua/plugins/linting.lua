@@ -19,17 +19,7 @@ return {
 			group = lint_augroup,
 			callback = function()
 				local ft = vim.bo.filetype
-				if
-					(
-						ft == "javascript"
-						or ft == "typescript"
-						or ft == "javascriptreact"
-						or ft == "typescriptreact"
-						or ft == "svelte"
-					) and vim.fn.glob(".eslintrc*") ~= ""
-				then
-					lint.try_lint()
-				elseif ft == "python" then
+				if vim.fn.glob("*eslint*") ~= "" or ft == "python" then
 					lint.try_lint()
 				end
 			end,
