@@ -34,8 +34,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 bindkey '^X' autosuggest-execute
 
-# Run neofetch if not in integrated terminal
-if [ -z "$NVIM" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+# Run neofetch if not in integrated terminal or tmux
+if [ -z "$NVIM" ] && [ "$TERM_PROGRAM" != "vscode" ] && [ -z "$TMUX" ]; then
     macchina
 fi
 
