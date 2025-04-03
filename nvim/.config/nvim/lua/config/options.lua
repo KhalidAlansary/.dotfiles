@@ -14,6 +14,8 @@ vim.opt.smartcase = true
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
 
+vim.opt.showmode = false
+
 -- Enable if using WSL
 -- vim.g.clipboard = {
 --   name = 'WslClipboard',
