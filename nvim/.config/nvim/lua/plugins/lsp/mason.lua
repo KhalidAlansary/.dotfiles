@@ -28,6 +28,7 @@ return {
 				"pyright",
 				"clangd",
 				"cmake",
+				"rust_analyzer",
 			},
 			automatic_installation = true,
 		})

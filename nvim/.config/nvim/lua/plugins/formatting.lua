@@ -21,6 +21,7 @@ return {
 			cmake = { "gersemi" },
 			cpp = { "clang-format" },
 			java = { "clang-format" },
+			rust = { "rustfmt" },
 		},
 		format_on_save = {
 			lsp_fallback = true,
