@@ -12,6 +12,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.cursorline = true
+vim.opt.signcolumn = "yes"
 
 -- Enable if using WSL
 -- vim.g.clipboard = {
