@@ -20,6 +20,7 @@ alias vi=nvim
 alias open=xdg-open
 alias lg="lazygit"
 alias code="code-insiders"
+alias la="ls -la"
 
 eval "$(zoxide init zsh)"
 
