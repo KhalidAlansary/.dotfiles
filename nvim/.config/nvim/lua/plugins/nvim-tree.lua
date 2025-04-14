@@ -20,11 +20,6 @@ return {
 			show_on_dirs = true,
 			show_on_open_dirs = false,
 		},
-		actions = {
-			open_file = {
-				quit_on_open = true,
-			},
-		},
 	},
 	config = function(_, opts)
 		vim.g.loaded_netrw = 1
