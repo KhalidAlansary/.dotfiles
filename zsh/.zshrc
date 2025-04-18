@@ -26,8 +26,6 @@ eval "$(zoxide init zsh)"
 
 eval "$(fzf --zsh)"
 
-eval "$(thefuck --alias)"
-
 # Starship for an awesome prompt
 eval "$(starship init zsh)"
 
@@ -50,4 +48,4 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-export PATH=$PATH:/home/khald0r/.spicetify
+eval $(thefuck --alias)
