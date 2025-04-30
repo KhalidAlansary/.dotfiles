@@ -18,9 +18,10 @@ alias grep='grep --color=auto'
 alias nv=nvim
 alias vi=nvim
 alias open=xdg-open
-alias lg="lazygit"
-alias code="code-insiders"
-alias la="ls -la"
+alias lg=lazygit
+alias code=code-insiders
+alias la='ls -la'
+alias ncu='ncu --format group'
 
 eval "$(zoxide init zsh)"
 
