@@ -29,6 +29,7 @@ return {
 				"clangd",
 				"cmake",
 				"rust_analyzer",
+				"postgrestools",
 			},
 			automatic_installation = true,
 		})
@@ -43,6 +44,7 @@ return {
 				"eslint_d",
 				"clang-format",
 				"gersemi",
+				"pgformatter",
 			},
 			automatic_installation = true,
 		})

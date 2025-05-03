@@ -22,6 +22,7 @@ return {
 			cpp = { "clang-format" },
 			java = { "clang-format" },
 			rust = { "rustfmt" },
+			sql = { "pg_format" },
 		},
 		format_on_save = {
 			lsp_fallback = true,
