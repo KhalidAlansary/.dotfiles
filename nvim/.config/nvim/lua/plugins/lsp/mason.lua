@@ -29,7 +29,7 @@ return {
 				"clangd",
 				"cmake",
 				"rust_analyzer",
-				"postgrestools",
+				"postgres_lsp",
 			},
 			automatic_installation = true,
 		})
