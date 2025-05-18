@@ -18,7 +18,7 @@ return {
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			c = { "clang-format" },
-			cmake = { "gersemi" },
+			cmake = { "cmake-format" },
 			cpp = { "clang-format" },
 			java = { "clang-format" },
 			rust = { "rustfmt" },
