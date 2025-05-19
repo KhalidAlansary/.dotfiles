@@ -72,6 +72,7 @@ return {
 		end
 
 		vim.lsp.enable({
+			"bashls",
 			"clangd",
 			"cmake",
 			"cssls",

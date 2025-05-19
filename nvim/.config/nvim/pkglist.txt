@@ -1,3 +1,4 @@
+bash-language-server
 clang
 clang-format-static-bin
 cmake-format
