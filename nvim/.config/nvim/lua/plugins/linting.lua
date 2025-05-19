@@ -18,10 +18,7 @@ return {
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,
 			callback = function()
-				local ft = vim.bo.filetype
-				if vim.fn.glob("*eslint*") ~= "" or ft == "python" then
-					lint.try_lint()
-				end
+				lint.try_lint()
 			end,
 		})
 
