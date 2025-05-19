@@ -1,4 +1,4 @@
 [[manager.prepend_keymap]]
 on   = [ "g", "p" ]
-run  = "cd ~/Projects"
-desc = "Cd to ~/Projects"
+run  = "cd ~/projects"
+desc = "Cd to ~/projects"
