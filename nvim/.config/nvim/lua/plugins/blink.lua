@@ -4,16 +4,9 @@ return {
 		"rafamadriz/friendly-snippets",
 		{
 			"folke/lazydev.nvim",
-			dependencies = {
-				"justinsgithub/wezterm-types",
-			},
 			ft = "lua",
 			opts = {
-				library = {
-					"lazy.nvim",
-					{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
-					{ path = "wezterm-types", mods = { "wezterm" } },
-				},
+				library = { "lazy.nvim", { path = "${3rd}/luv/library", words = { "vim%.uv" } } },
 			},
 		},
 	},
