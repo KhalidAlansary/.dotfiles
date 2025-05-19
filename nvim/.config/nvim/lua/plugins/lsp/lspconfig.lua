@@ -70,5 +70,19 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
+
+		vim.lsp.enable({
+			"clangd",
+			"cmake",
+			"cssls",
+			"emmet_ls",
+			"html",
+			"lua_ls",
+			"pyright",
+			"rust_analyzer",
+			"svelte",
+			"tailwindcss",
+			"ts_ls",
+		})
 	end,
 }
