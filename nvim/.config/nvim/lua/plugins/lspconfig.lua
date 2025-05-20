@@ -74,6 +74,7 @@ return {
 			"cssls",
 			"emmet_ls",
 			"html",
+			"hyprls",
 			"lua_ls",
 			"pyright",
 			"rust_analyzer",
