@@ -1,4 +1,5 @@
-[[mgr.prepend_keymap]]
-on   = [ "g", "p" ]
-run  = "cd ~/projects"
-desc = "Cd to ~/projects"
+[mgr]
+prepend_keymap = [
+  { on = [ "g", "p" ], run = "cd ~/projects", desc = "Cd to ~/projects" },
+  { on = [ "g", "." ], run = "cd ~/.dotfiles", desc = "Cd to ~/.dotfiles" }
+]
