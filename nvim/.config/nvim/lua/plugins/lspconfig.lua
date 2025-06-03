@@ -76,6 +76,7 @@ return {
 			"html",
 			"hyprls",
 			"lua_ls",
+			"postgres_lsp",
 			"pyright",
 			"rust_analyzer",
 			"svelte",

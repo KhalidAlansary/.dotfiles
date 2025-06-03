@@ -8,6 +8,7 @@ hyprls-git
 lua-language-server
 nodejs-emmet-ls
 pgformatter
+postgrestools-bin
 prettier
 pyright
 python-black
