@@ -34,11 +34,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 bindkey '^X' autosuggest-execute
 
-# Run neofetch if not in integrated terminal or tmux
-if [ -z "$NVIM" ] && [ "$TERM_PROGRAM" != "vscode" ] && [ -z "$TMUX" ]; then
-    macchina
-fi
-
 # Set up yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
