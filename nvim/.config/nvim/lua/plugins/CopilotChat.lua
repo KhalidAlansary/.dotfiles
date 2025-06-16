@@ -21,7 +21,6 @@ return {
 				insert = "<C-a>",
 			},
 		},
-		model = "claude-3.7-sonnet-thought",
 	},
 	keys = {
 		{
