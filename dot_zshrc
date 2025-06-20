@@ -22,6 +22,8 @@ alias lg=lazygit
 alias code=code-insiders
 alias la='ls -la'
 alias ncu='ncu --format group'
+alias cz=chezmoi
+alias ce='chezmoi edit --apply'
 
 eval "$(zoxide init zsh)"
 
