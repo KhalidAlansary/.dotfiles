@@ -46,4 +46,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+function theme() {
+  set -e
+  echo "theme = \"$1\"" > {{ .chezmoi.sourceDir }}/.chezmoidata/theme.toml
+  chezmoi apply
+}
+
 eval $(thefuck --alias)
