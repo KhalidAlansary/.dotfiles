@@ -4,6 +4,7 @@ clang-format-static-bin
 cmake-format
 cmake-language-server
 eslint_d
+gopls
 hyprls-git
 lua-language-server
 nodejs-emmet-ls

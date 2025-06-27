@@ -71,6 +71,7 @@ return {
 			"cmake",
 			"cssls",
 			"emmet_ls",
+			"gopls",
 			"html",
 			"hyprls",
 			"lua_ls",
