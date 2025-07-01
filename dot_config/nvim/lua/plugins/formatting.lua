@@ -14,6 +14,7 @@ return {
 			javascript = { "prettier" },
 			javascriptreact = { "prettier" },
 			json = { "prettier" },
+			jsonc = { "prettier" },
 			liquid = { "prettier" },
 			lua = { "stylua" },
 			markdown = { "prettier" },
