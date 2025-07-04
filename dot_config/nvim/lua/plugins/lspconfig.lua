@@ -77,7 +77,7 @@ return {
 			"clangd",
 			"cmake",
 			"cssls",
-			"emmet_ls",
+			"emmet_language_server",
 			"gopls",
 			"html",
 			"hyprls",
