@@ -46,10 +46,20 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+declare -A wallpapers=(
+  [ashen]="red-forest.jpg"
+  [tokyonight]="purple_sunset.jpg"
+  )
 function theme() {
-  set -e
-  echo "theme = \"$1\"" > {{ .chezmoi.sourceDir }}/.chezmoidata/theme.toml
+  if [ -z "$2" ]; then
+    wallpaper="${wallpapers[$1]}"
+  else
+    wallpaper="$2"
+  fi
+  echo "theme = \"$1\"\nwallpaper = \"$wallpaper\"" > {{ .chezmoi.sourceDir }}/.chezmoidata/theme.toml
   chezmoi apply
+  killall hyprpaper
+  hyprctl dispatch exec hyprpaper
 }
 
 eval $(thefuck --alias)
