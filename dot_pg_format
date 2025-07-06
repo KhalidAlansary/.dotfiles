@@ -1,0 +1,14 @@
+# Change the case of the reserved keyword. Default is uppercase: 2.
+# Values: 0=>unchanged, 1=>lowercase, 2=>uppercase, 3=>capitalize.
+keyword-case=1
+
+# Do not add an extra empty line at end of the output.
+no-extra-line=1
+
+spaces=2
+
+# Use tabs instead of space characters, when used spaces is set to 1 whatever is its value.
+tabs=0
+
+# Remove the space character between a function call and the open parenthesis that follow.
+no-space-function=0
