@@ -21,8 +21,7 @@ packages=(
     os-prober
     # Desktop environment, essential apps, and utilities
     sudo
-    sddm
-    plasma
+    gnome
     hyprland hyprlock hyprpaper
     kitty
     waybar
@@ -64,7 +63,7 @@ echo "EDITOR=nvim\nMANPAGER='nvim +Man!'" > /mnt/etc/environment
 
 sed -i '/^#\[multilib\]/{s/^#//;n;s/^#//;}' /mnt/etc/pacman.conf
 
-arch-chroot /mnt systemctl enable NetworkManager sddm jellyfin docker.socket
+arch-chroot /mnt systemctl enable NetworkManager gdm jellyfin docker.socket
 
 # FIX:
 arch-chroot /mnt git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin && cd /tmp/yay-bin && makepkg -si --noconfirm
@@ -74,6 +73,10 @@ sed -i '/^# %wheel ALL=(ALL:ALL) ALL/s/^# //' /mnt/etc/sudoers
 echo 'Change the root password (run passwd) and create a user (run useradd -m -G wheel -s /bin/bash username)'
 
 arch-chroot /mnt
+
+# GNOME settings:
+arch-chroot /mnt gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
+arch-chroot /mnt gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']"
 
 umount -R /mnt
 reboot
