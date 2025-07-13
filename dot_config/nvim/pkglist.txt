@@ -11,6 +11,7 @@ nodejs-emmet-ls
 pgformatter
 postgrestools-bin
 prettier
+prisma-language-server
 pyright
 python-black
 python-isort

@@ -83,6 +83,7 @@ return {
 			"hyprls",
 			"lua_ls",
 			"postgres_lsp",
+			"prismals",
 			"pyright",
 			"rust_analyzer",
 			"svelte",
