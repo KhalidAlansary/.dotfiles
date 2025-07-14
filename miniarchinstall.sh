@@ -52,7 +52,13 @@ arch-chroot /mnt hwclock --systohc
 sed -i '/^#en_US.UTF-8 UTF-8/s/^#//' /mnt/etc/locale.gen
 
 echo 'LANG=en_US.UTF-8' > /mnt/etc/locale.conf
-echo 'KEYMAP=dvorak-programmer' > /mnt/etc/vconsole.conf
+cat <<EOF > /mnt/etc/vconsole.conf
+KEYMAP=dvorak-programmer
+XKBLAYOUT=us
+XKBMODEL=pc105
+XKBVARIANT=dvp
+XKBOPTIONS=caps:swapescape
+EOF
 echo 'Archie' > /mnt/etc/hostname
 
 sed -i '/^#GRUB_DISABLE_OS_PROBER=false/s/^#//' /mnt/etc/default/grub
@@ -75,8 +81,11 @@ echo 'Change the root password (run passwd) and create a user (run useradd -m -G
 arch-chroot /mnt
 
 # GNOME settings:
+# Use alt+shift to switch keyboard layouts
 arch-chroot /mnt gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
 arch-chroot /mnt gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']"
+# Enable fractional scaling
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 
 umount -R /mnt
 reboot
