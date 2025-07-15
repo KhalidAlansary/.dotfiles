@@ -80,12 +80,20 @@ echo 'Change the root password (run passwd) and create a user (run useradd -m -G
 
 arch-chroot /mnt
 
+created_user=$(arch-chroot /mnt getent passwd 1000 | cut -d: -f1)
+
 # GNOME settings:
 # Use alt+shift to switch keyboard layouts
 arch-chroot /mnt gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
 arch-chroot /mnt gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']"
 # Enable fractional scaling
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+arch-chroot /mnt gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+# Use gnome's settings for gdm
+mkdir /mnt/etc/systemd/system/gdm.service.d
+cat <<EOF > /mnt/etc/systemd/system/gdm.service.d
+[Service]
+ExecStartPre=/bin/cp /home/$created_user/.config/monitors.xml /var/lib/gdm/.config/monitors.xml
+EOF
 
 umount -R /mnt
 reboot
