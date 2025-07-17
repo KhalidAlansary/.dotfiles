@@ -81,6 +81,7 @@ return {
 			"gopls",
 			"html",
 			"hyprls",
+			"intelephense",
 			"lua_ls",
 			"postgres_lsp",
 			"prismals",

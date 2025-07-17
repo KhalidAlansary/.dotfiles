@@ -8,6 +8,7 @@ gopls
 hyprls-git
 lua-language-server
 nodejs-emmet-ls
+nodejs-intelephense
 pgformatter
 postgrestools-bin
 prettier
