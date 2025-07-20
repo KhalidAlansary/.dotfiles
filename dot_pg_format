@@ -5,10 +5,8 @@ keyword-case=1
 # Do not add an extra empty line at end of the output.
 no-extra-line=1
 
-spaces=2
-
 # Use tabs instead of space characters, when used spaces is set to 1 whatever is its value.
-tabs=0
+tabs=1
 
 # Remove the space character between a function call and the open parenthesis that follow.
 no-space-function=0
