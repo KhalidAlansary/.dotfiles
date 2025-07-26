@@ -7,6 +7,7 @@ eslint_d
 gopls
 hyprls-git
 lua-language-server
+nodejs-compose-language-service
 nodejs-emmet-ls
 nodejs-intelephense
 pgformatter

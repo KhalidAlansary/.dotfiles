@@ -77,6 +77,7 @@ return {
 			"clangd",
 			"cmake",
 			"cssls",
+			"docker_compose_language_service",
 			"emmet_language_server",
 			"gopls",
 			"html",
@@ -90,6 +91,13 @@ return {
 			"svelte",
 			"tailwindcss",
 			"ts_ls",
+		})
+
+		vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+			pattern = "{docker,podman}-compose.yml",
+			callback = function()
+				vim.bo.filetype = "yaml.docker-compose"
+			end,
 		})
 	end,
 }
