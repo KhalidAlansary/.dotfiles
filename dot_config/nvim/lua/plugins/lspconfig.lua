@@ -81,6 +81,7 @@ return {
 			"emmet_language_server",
 			"gopls",
 			"html",
+			"htmx",
 			"hyprls",
 			"intelephense",
 			"lua_ls",

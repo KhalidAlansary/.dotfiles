@@ -11,8 +11,10 @@ Before using this configuration, make sure you have the following installed:
 - **node**
 - **npm**
 
-#### For my Arch Linux comrades:
+#### For the Arch chads:
 
 ```bash
 sudo pacman -S ripgrep git nodejs npm
+yay -S - < pkglist.txt
+cargo install htmx-lsp
 ```
