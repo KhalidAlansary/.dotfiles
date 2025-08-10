@@ -47,8 +47,8 @@ function y() {
 }
 
 declare -A wallpapers=(
-  [ashen]="red-forest.jpg"
-  [tokyonight]="purple_sunset.jpg"
+  [ashen]="~/Pictures/Wallpapers/red-forest.jpg"
+  [tokyonight]="{{ .chezmoi.sourceDir }}/Wallpaper-Bank/wallpapers/Anime-Room.png"
   )
 function theme() {
   if [ -z "$2" ]; then
@@ -56,6 +56,7 @@ function theme() {
   else
     wallpaper="$2"
   fi
+	echo "wallpaper = \"$wallpaper\""
   echo "theme = \"$1\"\nwallpaper = \"$wallpaper\"" > {{ .chezmoi.sourceDir }}/.chezmoidata/theme.toml
   chezmoi apply
   killall hyprpaper
