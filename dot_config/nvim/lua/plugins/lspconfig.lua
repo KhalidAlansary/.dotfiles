@@ -94,6 +94,9 @@ return {
 			"ts_ls",
 		})
 
+		table.insert(vim.lsp.config.emmet_language_server.filetypes, "php")
+		table.insert(vim.lsp.config.htmx.filetypes, "php")
+
 		vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 			pattern = "{docker,podman}-compose.yml",
 			callback = function()
