@@ -1,6 +1,6 @@
 return {
 	"preservim/tagbar",
 	keys = {
-		{ "<leader>tg", ":TagbarToggle<CR>" },
+		{ "<leader>ct", vim.cmd.TagbarToggle, desc = "Toggle Tagbar" },
 	},
 }
