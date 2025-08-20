@@ -13,8 +13,5 @@ return {
 	config = function(_, opts)
 		vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 		require("auto-session").setup(opts)
-		vim.keymap.set("n", "<Leader>ls", require("auto-session.session-lens").search_session, {
-			noremap = true,
-		})
 	end,
 }
