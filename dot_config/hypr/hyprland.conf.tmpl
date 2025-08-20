@@ -271,4 +271,13 @@ windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned
 
 # Make Zen's (or FireFox's) Picture-in-Picture floating and at the bottom right
 windowrule = float, persistentsize, title:Picture-in-Picture
+windowrule = pin, title:Picture-in-Picture
 windowrule = move 100%-w-20, title:Picture-in-Picture
+
+windowrule = float, persistentsize, initialTitle: Discord Popout
+windowrule = pin, initialTitle: Discord Popout
+windowrule = move 100%-w-20, initialTitle: Discord Popout
+
+windowrule = float, persistentsize, class: showmethekey-gtk
+windowrule = pin, class: showmethekey-gtk
+windowrule = move 70% 50%-w-20, class: showmethekey-gtk
