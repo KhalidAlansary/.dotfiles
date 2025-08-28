@@ -2,7 +2,7 @@ return {
 	"CopilotC-Nvim/CopilotChat.nvim",
 	branch = "main",
 	dependencies = {
-		"github/copilot.vim",
+		"zbirenbaum/copilot.lua",
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope.nvim",
 	},
