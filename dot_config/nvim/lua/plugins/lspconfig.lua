@@ -92,6 +92,7 @@ return {
 			"svelte",
 			"tailwindcss",
 			"ts_ls",
+			"eslint",
 		})
 
 		table.insert(vim.lsp.config.emmet_language_server.filetypes, "php")
