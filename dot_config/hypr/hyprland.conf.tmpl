@@ -153,6 +153,7 @@ input {
     follow_mouse = 2
 
     sensitivity = -0.3
+    accel_profile = flat
 
     touchpad {
         natural_scroll = true
@@ -186,6 +187,9 @@ bind = , PRINT, exec, hyprshot --mode region --clipboard-only
 bind = $mainMod SHIFT, T, exec, normcap
 bind = $mainMod, N, exec, hyprlock
 bind = $mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
+bind = $mainMod SHIFT, Q, exec, .config/hypr/scripts/qwerty.sh
+bind = $mainMod SHIFT, D, exec, .config/hypr/scripts/dvp.sh
+
 
 # Move focus with mainMod + [HJKL] (vim keys)
 bind = $mainMod, H, movefocus, l
