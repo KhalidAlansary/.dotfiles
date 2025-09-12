@@ -15,6 +15,7 @@ return {
 		filetypes = {
 			yaml = true,
 			markdown = true,
+			json = true,
 		},
 	},
 }
