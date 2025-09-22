@@ -6,6 +6,7 @@
 	name = Khalid Alansary
 [alias]
 	l = log --oneline
+	pf = push --force-with-lease
 [commit]
 	gpgsign = true
 [init]
