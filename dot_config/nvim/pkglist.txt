@@ -6,6 +6,7 @@ cmake-language-server
 eslint_d
 gopls
 hyprls-git
+jdtls
 lua-language-server
 nodejs-compose-language-service
 nodejs-emmet-ls
@@ -22,6 +23,7 @@ rust-analyzer
 stylua
 svelte-language-server
 tailwindcss-language-server
+tofu-ls-bin
 typescript-language-server
 typescript-svelte-plugin
 vscode-css-languageserver

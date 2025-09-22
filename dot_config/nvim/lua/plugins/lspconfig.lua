@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"saghen/blink.cmp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
+		{ "mfussenegger/nvim-jdtls" },
 	},
 	config = function()
 		local keymap = vim.keymap -- for conciseness
@@ -79,11 +80,13 @@ return {
 			"cssls",
 			"docker_compose_language_service",
 			"emmet_language_server",
+			"eslint",
 			"gopls",
 			"html",
 			"htmx",
 			"hyprls",
 			"intelephense",
+			"jdtls",
 			"lua_ls",
 			"postgres_lsp",
 			"prismals",
@@ -91,8 +94,8 @@ return {
 			"rust_analyzer",
 			"svelte",
 			"tailwindcss",
+			"tofu_ls",
 			"ts_ls",
-			"eslint",
 		})
 
 		table.insert(vim.lsp.config.emmet_language_server.filetypes, "php")
