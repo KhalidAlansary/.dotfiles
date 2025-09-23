@@ -94,6 +94,7 @@ return {
 			"rust_analyzer",
 			"svelte",
 			"tailwindcss",
+			"tinymist",
 			"tofu_ls",
 			"ts_ls",
 		})

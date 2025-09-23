@@ -23,6 +23,7 @@ rust-analyzer
 stylua
 svelte-language-server
 tailwindcss-language-server
+tinymist
 tofu-ls-bin
 typescript-language-server
 typescript-svelte-plugin
