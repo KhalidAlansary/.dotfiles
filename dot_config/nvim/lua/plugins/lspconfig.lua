@@ -75,6 +75,7 @@ return {
 
 		vim.lsp.enable({
 			"bashls",
+			"biome",
 			"clangd",
 			"cmake",
 			"cssls",
@@ -87,6 +88,7 @@ return {
 			"hyprls",
 			"intelephense",
 			"jdtls",
+			"jsonls",
 			"lua_ls",
 			"postgres_lsp",
 			"prismals",
@@ -96,7 +98,8 @@ return {
 			"tailwindcss",
 			"tinymist",
 			"tofu_ls",
-			"ts_ls",
+			"tsgo",
+			"turbo_ls",
 		})
 
 		table.insert(vim.lsp.config.emmet_language_server.filetypes, "php")
