@@ -24,6 +24,7 @@ packages=(
     gnome
     hyprland hyprlock hyprpaper
     kitty
+    ghostty
     waybar
     git
     openssh

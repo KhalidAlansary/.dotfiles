@@ -1,0 +1,5 @@
+background-opacity = 0.8
+font-family = Hack Nerd Font
+font-size = 12
+theme = TokyoNight
+gtk-tabs-location = bottom
