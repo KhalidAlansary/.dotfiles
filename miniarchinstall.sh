@@ -34,6 +34,7 @@ packages=(
     libreoffice-fresh
     reflector
     docker
+    chezmoi
     # Games and entertainment
     steam
     discord
