@@ -22,7 +22,8 @@ packages=(
     # Desktop environment, essential apps, and utilities
     sudo
     gnome
-    hyprland hyprlock hyprpaper
+    hyprland hyprlock hyprpaper hyprshot
+    xdg-desktop-portal-wlr xdg-desktop-portal-hyprland
     kitty
     ghostty
     waybar
@@ -33,8 +34,17 @@ packages=(
     texinfo
     libreoffice-fresh
     reflector
-    docker
+    docker{,-compose,-buildx}
     chezmoi
+    keyd
+    wl-clipboard
+    lazygit
+    tmux
+    pnpm
+    zoxide
+    thefuck
+    starship
+    thunderbird
     # Games and entertainment
     steam
     discord
@@ -99,3 +109,8 @@ EOF
 
 umount -R /mnt
 reboot
+
+# Post install notes:
+# add this to ~/.vscode/argv.json
+# "password-store": "gnome-libsecret"
+
