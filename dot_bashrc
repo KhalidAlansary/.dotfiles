@@ -1,0 +1,39 @@
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=100000
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
+export LS_COLORS="$(vivid generate molokai)"
+
+alias cd=z
+alias ls='eza --icons=always'
+alias grep='grep --color=auto'
+alias nv=nvim
+alias vi=nvim
+alias open=xdg-open
+alias lg=lazygit
+alias la='ls -la'
+alias ncu='ncu --format group'
+alias cz=chezmoi
+alias ce='chezmoi edit --watch'
+
+eval "$(fzf --bash)"
+
+# Starship for an awesome prompt
+eval "$(starship init bash)"
+
+eval $(thefuck --alias)
+
+eval "$(zoxide init bash)"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+source ~/.env
