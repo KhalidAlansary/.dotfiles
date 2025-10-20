@@ -21,8 +21,9 @@ packages=(
     os-prober
     # Desktop environment, essential apps, and utilities
     sudo
-    gnome
+    gnome{,-tweaks}
     hyprland hyprlock hyprpaper hyprshot
+    dunst
     xdg-desktop-portal-wlr xdg-desktop-portal-hyprland
     kitty
     ghostty
