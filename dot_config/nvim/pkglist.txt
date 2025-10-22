@@ -4,6 +4,7 @@ clang
 clang-format-static-bin
 cmake-format
 cmake-language-server
+docker-language-server-bin
 eslint_d
 gopls
 hyprls-git

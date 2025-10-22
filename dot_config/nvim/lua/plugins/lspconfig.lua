@@ -79,7 +79,7 @@ return {
 			"clangd",
 			"cmake",
 			"cssls",
-			"docker_compose_language_service",
+			"docker_language_server",
 			"emmet_language_server",
 			"eslint",
 			"gopls",
