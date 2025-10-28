@@ -23,6 +23,7 @@ python-black
 python-isort
 python-pylint
 rust-analyzer
+shellcheck
 stylua
 svelte-language-server
 tailwindcss-language-server
