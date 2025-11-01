@@ -2,6 +2,7 @@ return {
 	"saghen/blink.cmp",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
+		"Kaiser-Yang/blink-cmp-avante",
 		{
 			"folke/lazydev.nvim",
 			ft = "lua",
@@ -23,8 +24,12 @@ return {
 		},
 		signature = { enabled = true },
 		sources = {
-			default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+			default = { "avante", "lazydev", "lsp", "path", "snippets", "buffer" },
 			providers = {
+				avante = {
+					module = "blink-cmp-avante",
+					name = "Avante",
+				},
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",
