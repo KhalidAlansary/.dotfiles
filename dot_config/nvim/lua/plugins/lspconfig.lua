@@ -73,6 +73,16 @@ return {
 
 		vim.diagnostic.config({ virtual_text = true })
 
+		vim.lsp.config("cssls", {
+			settings = {
+				css = {
+					lint = {
+						unknownAtRules = "ignore",
+					},
+				},
+			},
+		})
+
 		vim.lsp.enable({
 			"bashls",
 			"biome",
