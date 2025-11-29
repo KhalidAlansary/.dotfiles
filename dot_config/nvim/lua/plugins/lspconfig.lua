@@ -103,6 +103,7 @@ return {
 			"postgres_lsp",
 			"prismals",
 			"pyright",
+			"ruff",
 			"rust_analyzer",
 			"svelte",
 			"tailwindcss",

@@ -20,9 +20,7 @@ postgrestools-bin
 prettier
 prisma-language-server
 pyright
-python-black
-python-isort
-python-pylint
+ruff
 rust-analyzer
 shellcheck
 stylua

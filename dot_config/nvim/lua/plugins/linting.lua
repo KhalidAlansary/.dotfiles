@@ -6,7 +6,6 @@ return {
 
 		lint.linters_by_ft = {
 			dockerfile = { "hadolint" },
-			python = { "pylint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
