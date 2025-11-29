@@ -1,4 +1,5 @@
-#!/bin/sh -e
+#!/usr/bin/env bash
+set -e
 
 echo "This script is to be run after partitioning your disk and formatting the partitions. (The Pre-installation section in the arch wiki.)"
 echo "This script expects the root to be mounted at /mnt and the EFI partition to be mounted at /efi."
@@ -22,7 +23,7 @@ packages=(
     # Desktop environment, essential apps, and utilities
     sudo
     gnome{,-tweaks}
-    hyprland hyprlock hyprpaper hyprshot
+    hyprland hyprlock hyprpaper hyprshot cliphist
     dunst
     xdg-desktop-portal-wlr xdg-desktop-portal-hyprland
     kitty
@@ -46,6 +47,7 @@ packages=(
     thefuck
     starship
     thunderbird
+    showmethekey
     # Games and entertainment
     steam
     discord
@@ -78,7 +80,7 @@ sed -i '/^#GRUB_DISABLE_OS_PROBER=false/s/^#//' /mnt/etc/default/grub
 arch-chroot /mnt grub-install --efi-directory=/efi
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 
-echo "EDITOR=nvim\nMANPAGER='nvim +Man!'" > /mnt/etc/environment
+printf "EDITOR=nvim\nMANPAGER='nvim +Man!'" > /mnt/etc/environment
 
 sed -i '/^#\[multilib\]/{s/^#//;n;s/^#//;}' /mnt/etc/pacman.conf
 
