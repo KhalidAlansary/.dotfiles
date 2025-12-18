@@ -2,19 +2,24 @@ HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
 
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
-
 export LS_COLORS="$(vivid generate molokai)"
+
+set show-all-if-ambiguous on
+set menu-complete-display-prefix on
+bind ‘TAB:menu-complete’
+set colored-completion-prefix on
+set colored-stats on
 
 alias cd=z
 alias ls='eza --icons=always'
 alias grep='grep --color=auto'
+alias ip='ip --color=auto'
 alias nv=nvim
 alias vi=nvim
 alias open=xdg-open
 alias lg=lazygit
 alias la='ls -la'
+alias ll='ls -l'
 alias ncu='ncu --format group'
 alias cz=chezmoi
 alias ce='chezmoi edit --watch'
