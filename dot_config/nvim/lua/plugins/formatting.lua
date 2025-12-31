@@ -24,6 +24,7 @@ return {
 			svelte = { "biome-check" },
 			typescript = { "biome-check" },
 			typescriptreact = { "biome-check" },
+			typst = { "typstyle" },
 			yaml = { "prettier" },
 		},
 		format_on_save = {

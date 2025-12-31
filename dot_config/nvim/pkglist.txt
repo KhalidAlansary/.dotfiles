@@ -1,10 +1,10 @@
 bash-language-server
-ctags
 biome
 clang
 clang-format-static-bin
 cmake-format
 cmake-language-server
+ctags
 docker-language-server-bin
 eslint_d
 gopls
@@ -30,4 +30,6 @@ tinymist
 tofu-ls-bin
 typescript-language-server
 typescript-svelte-plugin
+typstyle-bin
 vscode-langservers-extracted
+wobsocat
