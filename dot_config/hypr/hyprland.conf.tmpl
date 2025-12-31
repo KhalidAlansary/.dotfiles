@@ -277,20 +277,14 @@ bind = , Pause, global, :toggle_deafen
 ##############################
 
 # Ignore maximize requests from apps. You'll probably like this.
-windowrule = suppressevent maximize, class:.*
+windowrule = suppress_event maximize, match:class .*
 
 # Fix some dragging issues with XWayland
-windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+windowrule = no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0
 
 # Make Zen's (or FireFox's) Picture-in-Picture floating and at the bottom right
-windowrule = float, persistentsize, title:Picture-in-Picture
-windowrule = pin, title:Picture-in-Picture
-windowrule = move 100%-w-20, title:Picture-in-Picture
+windowrule = float on, persistent_size on, pin on, move ((monitor_w*1)-window_w-20), match:title Picture-in-Picture
 
-windowrule = float, persistentsize, initialTitle: Discord Popout
-windowrule = pin, initialTitle: Discord Popout
-windowrule = move 100%-w-20, initialTitle: Discord Popout
+windowrule = float on, persistent_size on, pin on, move ((monitor_w*1)-window_w-20), match:initial_title Discord Popout
 
-windowrule = float, persistentsize, class: showmethekey-gtk
-windowrule = pin, class: showmethekey-gtk
-windowrule = move 70% 50%-w-20, class: showmethekey-gtk
+windowrule = float on, persistent_size on, pin on, move ((monitor_w*0.7)) ((monitor_h*0.5)-window_h-20), match:class showmethekey-gtk
