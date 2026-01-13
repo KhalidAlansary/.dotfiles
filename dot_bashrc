@@ -23,6 +23,7 @@ alias ll='ls -l'
 alias ncu='ncu --format group'
 alias cz=chezmoi
 alias ce='chezmoi edit --watch'
+alias cb="fj --host codeberg.org"
 
 eval "$(fzf --bash)"
 
