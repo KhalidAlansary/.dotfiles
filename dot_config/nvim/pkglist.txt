@@ -7,6 +7,7 @@ cmake-format
 cmake-language-server
 ctags
 docker-language-server-bin
+emmet-language-server
 eslint_d
 gopls
 hadolint-bin
@@ -14,7 +15,6 @@ hyprls-git
 jdtls
 lua-language-server
 nodejs-compose-language-service
-nodejs-emmet-ls
 nodejs-intelephense
 pgformatter
 postgrestools-bin
