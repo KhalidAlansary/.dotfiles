@@ -84,6 +84,7 @@ return {
 		})
 
 		vim.lsp.enable({
+			"astro",
 			"bashls",
 			"biome",
 			"clangd",

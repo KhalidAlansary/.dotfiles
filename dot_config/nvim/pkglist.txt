@@ -1,3 +1,4 @@
+astrojs-language-server
 bash-language-server
 biome
 clang
