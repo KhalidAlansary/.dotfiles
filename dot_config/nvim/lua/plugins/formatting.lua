@@ -18,7 +18,6 @@ return {
 			liquid = { "prettier" },
 			lua = { "stylua" },
 			markdown = { "prettier" },
-			python = { "isort", "black" },
 			rust = { "rustfmt" },
 			sql = { "pg_format" },
 			svelte = { "biome-check" },
