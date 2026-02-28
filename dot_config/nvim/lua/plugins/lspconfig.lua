@@ -87,6 +87,7 @@ return {
 			"astro",
 			"bashls",
 			"biome",
+			"buf_ls",
 			"clangd",
 			"cmake",
 			"cssls",
