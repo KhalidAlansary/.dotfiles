@@ -13,6 +13,7 @@ gopls
 hadolint-bin
 hyprls-git
 jdtls
+just-lsp
 lua-language-server
 nodejs-compose-language-service
 nodejs-intelephense

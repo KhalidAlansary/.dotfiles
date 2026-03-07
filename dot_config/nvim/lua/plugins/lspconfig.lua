@@ -101,6 +101,7 @@ return {
 			"intelephense",
 			"jdtls",
 			"jsonls",
+			"just",
 			"lua_ls",
 			"postgres_lsp",
 			"prismals",
