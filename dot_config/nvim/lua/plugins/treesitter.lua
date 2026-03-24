@@ -1,35 +1,31 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
-	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag",
-	},
-	opts = {
-		highlight = {
-			enable = true,
-			disable = { "csv", "tsv" },
-		},
-		indent = {
-			enable = true,
-		},
-		autotag = {
-			enable = true,
-		},
-		incremental_selection = {
-			enable = true,
-			keymaps = {
-				init_selection = "<C-space>",
-				node_incremental = "<C-space>",
-				scope_incremental = false,
-				node_decremental = "<bs>",
-			},
-		},
-		auto_install = true,
-	},
-	config = function(_, opts)
-		local treesitter = require("nvim-treesitter.configs")
+	{
+		"nvim-treesitter/nvim-treesitter",
+		event = { "BufReadPre", "BufNewFile" },
+		build = ":TSUpdate",
+		main = "nvim-treesitter",
+		config = function(_, opts)
+			require("nvim-treesitter").setup(opts)
 
-		treesitter.setup(opts)
-	end,
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "*",
+				callback = function()
+					local disable_fts = { csv = true, tsv = true }
+					if disable_fts[vim.bo.filetype] then
+						return
+					end
+					pcall(vim.treesitter.start)
+					vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+				end,
+			})
+		end,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {
+			-- basic autotag setup since it is independent now
+			enable = true,
+		},
+	},
 }
