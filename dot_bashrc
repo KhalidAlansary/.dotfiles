@@ -30,7 +30,7 @@ eval "$(fzf --bash)"
 # Starship for an awesome prompt
 eval "$(starship init bash)"
 
-eval $(thefuck --alias)
+eval "$(pay-respects bash --alias)"
 
 eval "$(zoxide init bash)"
 

@@ -44,7 +44,6 @@ packages=(
     tmux
     pnpm
     zoxide
-    thefuck
     starship
     thunderbird
     showmethekey
