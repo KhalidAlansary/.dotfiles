@@ -85,6 +85,7 @@ return {
 
 		vim.lsp.enable({
 			"astro",
+			"basedpyright",
 			"bashls",
 			"biome",
 			"buf_ls",
@@ -105,7 +106,6 @@ return {
 			"lua_ls",
 			"postgres_lsp",
 			"prismals",
-			"pyright",
 			"ruff",
 			"rust_analyzer",
 			"svelte",

@@ -1,4 +1,5 @@
 astrojs-language-server
+basedpyright-bin
 bash-language-server
 biome
 clang
@@ -21,7 +22,6 @@ pgformatter
 postgrestools-bin
 prettier
 prisma-language-server
-pyright
 ruff
 rust-analyzer
 shellcheck
