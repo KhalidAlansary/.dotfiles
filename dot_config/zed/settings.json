@@ -1,0 +1,61 @@
+{
+	"buffer_font_family": "Hack Nerd Font",
+	"buffer_line_height": "comfortable",
+	"project_panel": {
+		"dock": "left"
+	},
+	"terminal": {
+		"font_family": "Hack Nerd Font"
+	},
+	"helix_mode": false,
+	"vim_mode": true,
+	"ssh_connections": [
+		{
+			"host": "cm_dev",
+			"args": [],
+			"projects": [
+				{
+					"paths": ["/home/khalid/Viro"]
+				}
+			]
+		}
+	],
+	"icon_theme": {
+		"mode": "dark",
+		"light": "Zed (Default)",
+		"dark": "Colored Zed Icons Theme Dark"
+	},
+	"ui_font_size": 16,
+	"buffer_font_size": 16.0,
+	"theme": {
+		"mode": "dark",
+		"light": "One Light",
+		"dark": "Tokyo Night"
+	},
+	"languages": {
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+		"JavaScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TypeScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TSX": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		}
+	}
+}

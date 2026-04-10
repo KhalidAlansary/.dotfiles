@@ -1,0 +1,40 @@
+[
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-$": "terminal_panel::Toggle",
+			"space b": "workspace::ToggleLeftDock"
+		}
+	},
+	{
+		"context": "Workspace",
+		"unbind": {
+			"ctrl-`": "terminal_panel::Toggle"
+		}
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"ctrl-p": null
+		}
+	},
+	{
+		"context": "Editor && showing_completions",
+		"bindings": {
+			"ctrl-y": "editor::ConfirmCompletion"
+		}
+	},
+	{
+		"context": "(VimControl && !menu) || (!Editor && !Terminal)",
+		"bindings": {
+			"ctrl-h": "workspace::ActivatePaneLeft",
+			"ctrl-l": "workspace::ActivatePaneRight"
+		}
+	},
+	{
+		"context": "Editor && !agent_diff",
+		"bindings": {
+			"space h r": "git::Restore"
+		}
+	}
+]
