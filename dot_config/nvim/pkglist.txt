@@ -10,6 +10,7 @@ ctags
 docker-language-server-bin
 emmet-language-server
 eslint_d
+gitlab_ci_ls
 gopls
 hadolint-bin
 hyprls-git

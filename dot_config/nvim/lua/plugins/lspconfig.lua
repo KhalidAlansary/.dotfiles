@@ -95,6 +95,7 @@ return {
 			"docker_language_server",
 			"emmet_language_server",
 			"eslint",
+			"gitlab_ci_ls",
 			"gopls",
 			"html",
 			"htmx",
