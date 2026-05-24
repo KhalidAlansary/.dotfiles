@@ -135,7 +135,6 @@ animations {
 # windowrule = rounding 0, floating:0, onworkspace:f[1]
 
 dwindle {
-    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
     preserve_split = true # You probably want this
 }
 
@@ -187,7 +186,7 @@ bind = $mainMod, Z, exec, $browser
 bind = $mainMod, F, togglefloating,
 bind = ALT, SPACE, exec, $menu
 bind = $mainMod, P, pseudo,
-bind = $mainMod, T, togglesplit,
+bind = $mainMod, T, layoutmsg, togglesplit
 bind = $mainMod SHIFT, R, exec, reboot
 bind = $mainMod SHIFT, U, exec, shutdown now
 bind = ALT, PRINT, exec, hyprshot --mode active --mode window --clipboard-only
@@ -284,9 +283,9 @@ windowrule = suppress_event maximize, match:class .*
 windowrule = no_focus on, match:class ^$, match:title ^$, match:xwayland 1, match:float 1, match:fullscreen 0, match:pin 0
 
 # Make Zen's (or FireFox's) Picture-in-Picture floating and at the bottom right
-windowrule = float on, persistent_size on, pin on, move ((monitor_w*1)-window_w-20), match:title Picture-in-Picture
+windowrule = float on, persistent_size on, pin on, move ((monitor_w*1)-window_w-20) ((monitor_h*1)-window_h-20), match:title Picture-in-Picture
 
-windowrule = float on, persistent_size on, pin on, move ((monitor_w*1)-window_w-20), match:initial_title Discord Popout
+windowrule = float on, persistent_size on, pin on, move ((monitor_w*1)-window_w-20) ((monitor_h*1)-window_h-20), match:initial_title Discord Popout
 
 windowrule = float on, persistent_size on, pin on, move ((monitor_w*0.7)) ((monitor_h*0.5)-window_h-20), match:class showmethekey-gtk
 
