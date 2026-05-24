@@ -3,3 +3,4 @@ font-family = Hack Nerd Font
 font-size = 12
 theme = TokyoNight
 gtk-tabs-location = bottom
+keybind = shift+enter=text:\x1b\r
