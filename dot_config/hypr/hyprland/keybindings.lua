@@ -1,30 +1,58 @@
 local programs = require("hyprland.programs")
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(programs.terminal))
-local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
-hl.bind(
-	mainMod .. " + M",
-	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
+-- Apps and core actions
+hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(programs.terminal))
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprshutdown"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(programs.menu))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
+hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | fuzzel -d | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprshutdown -t 'Restarting...' --post-cmd 'reboot'"))
+hl.bind(mainMod .. " + SHIFT + U", hl.dsp.exec_cmd("hyprshutdown -t 'Shutting down...' --post-cmd 'poweroff'"))
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("normcap"))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd(programs.menu))
+hl.bind("ALT + Print", hl.dsp.exec_cmd("hyprshot --mode active --mode window --clipboard-only"))
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot --mode region --clipboard-only"))
 
--- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+-- Move focus with vim keys
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+
+-- Move windows with vim keys
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+
+-- Keyboard layout switchers
+local home = os.getenv("HOME")
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/qwerty.sh"))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/dvp.sh"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
-for i = 1, 10 do
-	local key = i % 10 -- 10 maps to key 0
+
+-- Workspaces on the programmer-dvorak number row
+local dvorakWorkspaceKeys = {
+	"parenleft", -- 1
+	"parenright", -- 2
+	"braceright", -- 3
+	"plus", -- 4
+	"braceleft", -- 5
+	"bracketright", -- 6
+	"bracketleft", -- 7
+	"exclam", -- 8
+	"equal", -- 9
+	"asterisk", -- 10
+}
+for i, key in ipairs(dvorakWorkspaceKeys) do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
@@ -33,7 +61,7 @@ end
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
--- Scroll through existing workspaces with mainMod + scroll
+-- Scroll workspaces (jumps by 2; odd = left monitor, even = right monitor)
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+2" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-2" }))
 
@@ -70,3 +98,10 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+
+-- Global keybinds
+hl.bind(mainMod .. " + F9", hl.dsp.pass("class:^(com\\.obsproject\\.Studio)$"))
+hl.bind(mainMod .. " + F10", hl.dsp.pass("class:^(com\\.obsproject\\.Studio)$"))
+hl.bind("SHIFT + F12", hl.dsp.pass("class:.*"))
+hl.bind("Scroll_Lock", hl.dsp.global(":toggle_mute"))
+hl.bind("Pause", hl.dsp.global(":toggle_deafen"))
