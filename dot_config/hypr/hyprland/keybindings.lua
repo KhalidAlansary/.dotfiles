@@ -100,8 +100,8 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Global keybinds
-hl.bind(mainMod .. " + F9", hl.dsp.pass("class:^(com\\.obsproject\\.Studio)$"))
-hl.bind(mainMod .. " + F10", hl.dsp.pass("class:^(com\\.obsproject\\.Studio)$"))
-hl.bind("SHIFT + F12", hl.dsp.pass("class:.*"))
+hl.bind(mainMod .. " + F9", hl.dsp.pass({ window = "class:^(com\\.obsproject\\.Studio)$" }))
+hl.bind(mainMod .. " + F10", hl.dsp.pass({ window = "class:^(com\\.obsproject\\.Studio)$" }))
+hl.bind("SHIFT + F12", hl.dsp.pass({ window = "class:.*" }))
 hl.bind("Scroll_Lock", hl.dsp.global(":toggle_mute"))
 hl.bind("Pause", hl.dsp.global(":toggle_deafen"))
