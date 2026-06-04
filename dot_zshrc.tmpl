@@ -28,6 +28,10 @@ alias oc=opencode
 alias claude-yolo="claude --dangerously-skip-permissions"
 alias cb="fj --host codeberg.org"
 
+if [[ "$CLAUDECODE" == "1" ]]; then
+    unalias cd ls grep
+fi
+
 eval "$(zoxide init zsh)"
 
 eval "$(fzf --zsh)"
