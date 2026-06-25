@@ -14,6 +14,9 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.showmode = false
 
+vim.opt.grepprg = "rg --vimgrep --smart-case"
+vim.opt.grepformat = "%f:%l:%c:%m"
+
 -- Enable if using WSL
 -- vim.g.clipboard = {
 --   name = 'WslClipboard',
