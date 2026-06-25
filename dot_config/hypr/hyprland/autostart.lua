@@ -5,6 +5,8 @@
 local programs = require("hyprland.programs")
 
 hl.on("hyprland.start", function()
+	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
+	hl.exec_cmd("systemctl --user start hyprland-session.target")
 	local autostart_cmds = { "waybar", "hyprpaper", "steam -silent", "heroic", "qbittorrent" }
 	for i = 1, #autostart_cmds do
 		hl.exec_cmd(autostart_cmds[i])
