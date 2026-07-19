@@ -2,7 +2,14 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {
+		formatters = {
+			["grafana-alloy"] = {
+				command = "grafana-alloy",
+				args = { "fmt", "-" },
+			},
+		},
 		formatters_by_ft = {
+			alloy = { "grafana-alloy" },
 			c = { "clang-format" },
 			cmake = { "cmake-format" },
 			cpp = { "clang-format" },
